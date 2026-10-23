@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buscador de Pel·lícules</title>
+    <meta name="description" content="Cerca pel·lícules i consulta informació de TMDB.">
+    <link rel="icon" href="images/lupa.jpg">
+
 </head>
 <body>
     <header>
@@ -14,7 +17,7 @@
         <nav>
             <ul>
                 <li><a href="https://www.buscador.html">Buscador</a></li>
-                <li><a href="https://www.contacte.html">Contacte</a></li>
+                <li><a href="contacte.html">Contacte</a></li>
             </ul>
         </nav>
     <header>
@@ -23,10 +26,11 @@
          <section id="buscador">
          <h1>BUSCAR una pel·lícula</h1>
          <p>Milions de títols, un sol cercador.</p>
-         <div>
-            <input type="text" placeholder="Cerca una pel·lícula">
-            <button>Cercar</button>
-        </div>
+         <form method="get" action="https://www.themoviedb.org/search">
+         <label for="query">Cerca una pel·lícula:</label>
+         <input type="search" id="query" name="query"placeholder="Cerca una pel·lícula"required>
+         <button type="submit">Cercar</button>
+        </form>
     </section>
 
     <section id="resultats">
